@@ -1,7 +1,7 @@
 # MergedBloodHoundQueries
 Added the Azure part from hausec / Bloodhound-Custom-Queries to CompassSecurity / BloodHoundQueries
 
-Replace the .json file located in C:\Users[USERNAME]\AppData\Roaming\BloodHound\customqueries.json
+Replace the .json file located in C:\Users\[USERNAME]\AppData\Roaming\BloodHound\customqueries.json
 
 
 # Reference:
