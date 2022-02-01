@@ -378,6 +378,24 @@
             ]
         },
         {
+            "name": "Find all paths to an Azure Resource Group",
+            "queryList": [
+                {
+                    "final": true,
+                    "query": "MATCH p = (n)-[r]->(g:AZResourceGroup) RETURN p"
+                }
+            ]
+        },
+        {
+            "name": "Find all paths to an Azure Devices",
+            "queryList": [
+                {
+                    "final": true,
+                    "query": "MATCH p = (n)-[r]->(g:AZDevice) RETURN p"
+                }
+            ]
+        },
+        {
             "name": "Return All Azure Users and their Groups",
             "queryList": [
                 {
@@ -410,15 +428,6 @@
                 {
                     "final": true,
                     "query": "MATCH p = (n)-[r:AZOwns]->(g:AZApp) RETURN p"
-                }
-            ]
-        },
-        {
-            "name": "Find all paths to an Azure Resource Group",
-            "queryList": [
-                {
-                    "final": true,
-                    "query": "MATCH p = (n)-[r]->(g:AZResourceGroup) RETURN p"
                 }
             ]
         },
