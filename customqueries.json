@@ -333,7 +333,7 @@
             ]
         },
         {
-            "name": "----------------------------------------AZURE QUERIES----------------------------------",
+            "name": "-----------------------------AZURE QUERIES----------------------------------",
             "queryList": [
                 {
                     "final": true,
@@ -410,6 +410,24 @@
                 {
                     "final": true,
                     "query": "MATCH p = (n)-[r:AZOwns]->(g:AZApp) RETURN p"
+                }
+            ]
+        },
+        {
+            "name": "Find all paths to an Azure Resource Group",
+            "queryList": [
+                {
+                    "final": true,
+                    "query": "MATCH p = (n)-[r]->(g:AZResourceGroup) RETURN p"
+                }
+            ]
+        },
+        {
+            "name": "Find Owners of Azure Groups",
+            "queryList": [
+                {
+                    "final": true,
+                    "query": "MATCH p = (n)-[r:AZOwns]->(g:AZGroup) RETURN p"
                 }
             ]
         }
