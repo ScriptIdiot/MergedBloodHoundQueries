@@ -216,11 +216,20 @@
             ]
         },
         {
+            "name": "LAPS Passwords Readable by Owned Principals",
+            "queryList": [
+                {
+                    "final": true,
+                    "query": "MATCH p = (n {owned: true})-[r1:MemberOf*1..]->(g:Group)-[r2:GenericAll]->(t:Computer {haslaps:true}) RETURN p"
+                }
+            ]
+        },
+        {
             "name": "Group Delegated Outbound Object Control of Owned Principals",
             "queryList": [
                 {
                     "final": true,
-                    "query": "MATCH p = (n {owned: true})-[r1:MemberOf*1..]->(g:Group)-[r2 {isacl: true}]->(n) RETURN p"
+                    "query": "MATCH p = (n {owned: true})-[r1:MemberOf*1..]->(g:Group)-[r2 {isacl: true}]->(t) RETURN p"
                 }
             ]
         },
@@ -331,7 +340,7 @@
                     "query": "MATCH (uc) WHERE uc.highvalue = true AND ((uc:User AND uc.enabled = false) OR (uc:Computer AND ((uc.enabled = false) OR (uc.lastlogon > 0 AND uc.lastlogon < (TIMESTAMP() / 1000 - 15552000)) OR (uc.lastlogontimestamp > 0 AND uc.lastlogontimestamp < (TIMESTAMP() / 1000 - 15552000))))) SET uc.highvalue = false, uc.nothighvaluereason = 'Inactive' RETURN uc"
                 }
             ]
-        },
+        },  
         {
             "name": "-----------------------------AZURE QUERIES----------------------------------",
             "queryList": [
@@ -440,5 +449,5 @@
                 }
             ]
         }
-	]
+    ]
 }
