@@ -11,4 +11,4 @@ Replace the .json file located in C:\Users\username\AppData\Roaming\BloodHound\c
 
 2) https://github.com/hausec/Bloodhound-Custom-Queries
 
-# Last update: 02 Feb 2022
+# Last update: 03 Feb 2022
